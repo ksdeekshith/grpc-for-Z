@@ -45,7 +45,8 @@ jobs:
     uses: ./.github/workflows/build_grpc.yaml
     with:
       release: ${{matrix.version}}
-  
+
+
 #   build-new-release:
 #     needs: [check-release]
 #     if: ${{ needs.check-release.outputs.latest-release }} != ${{ needs.check-release.outputs.current-release }}
