@@ -39,3 +39,16 @@ jobs:
     uses: ./.github/workflows/build_grpc.yaml
     with:
       release: 1.47.0
+#     release: ${{needs.check-release.outputs.latest-release}}
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
