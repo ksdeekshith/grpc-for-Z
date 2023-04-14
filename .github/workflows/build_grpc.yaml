@@ -64,13 +64,10 @@ jobs:
                       
       - name: Create Release
         id: create_release
-        uses: ncipollo/release-action@v1
+        uses: softprops/action-gh-release@v1
         with:
-          tag: ${{ inputs.release }}
+          tag_name: ${{ inputs.release }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          allowUpdates: true
-          artifacts: ./artifacts/grpcio-${{ inputs.release }}-cp39-cp39-linux_s390x.whl
+          files: ./artifacts/grpcio-${{ inputs.release }}-cp39-cp39-linux_s390x.whl
           name: ${{ inputs.release }}
-          replacesArtifacts: true
-          draft: false
           prerelease: false
